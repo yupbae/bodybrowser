@@ -1,9 +1,3 @@
-// File:src/Three.js
-
-/**
- * @author mrdoob / http://mrdoob.com/
- */
-
 var THREE = { REVISION: '71' };
 
 // browserify support
@@ -17,8 +11,6 @@ if ( typeof module === 'object' ) {
 // polyfills
 
 if ( Math.sign === undefined ) {
-
-	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sign
 
 	Math.sign = function ( x ) {
 
@@ -34,8 +26,6 @@ THREE.log = function() { console.log.apply( console, arguments ); }
 THREE.warn = function() { console.warn.apply( console, arguments ); }
 THREE.error = function() { console.error.apply( console, arguments ); }
 
-
-// https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent.button
 
 THREE.MOUSE = { LEFT: 0, MIDDLE: 1, RIGHT: 2 };
 
