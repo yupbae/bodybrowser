@@ -242,71 +242,6 @@ $("canvas").attr("style","width:60%;margin-left:auto;margin-right:auto;margin-to
 
 			}
 
-		</script>
-		 <script>
-
-			window.onload=function(){
-			  meSpeak.loadConfig("js/mespeak_config.json");
-			  meSpeak.mylangpath = {
-
-			  'english': 'voices/en/en.json',
-			  'spanish':"voices/es-la.json",
-			  'chinees': "voices/zh.json"
-
-			  };
-
-			  console.log(meSpeak.mylangpath);
-			}
-			 var idspeak ;
-			 var callback =  function (){
-			console.log("calling back in loadVoice function");
-			var texttospeak = document.getElementById('info').innerHTML;
-			console.log(texttospeak);
-			 idspeak =  meSpeak.speak(texttospeak);
-			 }
-
-			 function stopspeak(){
-
-			 	//var id = meSpeak.speak('hello world');
-			 	if(idspeak){
-				meSpeak.stop(idspeak);
-			    }
-			 }
-
-			 function loadsound(lang,callback){
-			  if(!lang || lang==''){
-			    lang = "english";
-			  }
-			  console.log(meSpeak['mylangpath'][lang]);
-			meSpeak.loadVoice(meSpeak['mylangpath'][lang],callback);
-			//callback();
-
-			}
-			  var callme = function(){
-			  		lang= $('curlang').val();
-			  		//alert(lang);
-			        loadsound(lang,callback);
-			  }
-
-
-
-
-			    function loadVoice(id,callback) {
-			      var fname="voices/"+id+".json";
-			      console.log("fname");
-			      meSpeak.loadVoice(fname, voiceLoaded);
-			      callback();
-			    }
-
-			    function changelanguage(lan){
-
-			    	var langug = {'es': 'spanish', 'en':'english', 'zh':'chinees'};
-			    	//alert(lan);
-			    	setTimeout(Localize.setLanguage(lan),500);
-			    	$('#curlang').val(langug[lan]);
-
-			    }
-			  
 		</script>		
 		<script src="https://cdn.localizejs.com/localize.js"></script>
 		<script>!function(a){if(!a.Localize){a.Localize={};for(var e=["translate","untranslate","phrase","initialize","translatePage","setLanguage","getLanguage","detectLanguage","untranslatePage","bootstrap","prefetch","on","off"],t=0;t<e.length;t++)a.Localize[e[t]]=function(){}}}(window);</script>
@@ -319,7 +254,6 @@ $("canvas").attr("style","width:60%;margin-left:auto;margin-right:auto;margin-to
 		    translateBody: true
 		  });
 		</script> 
-        <script src="js/mespeak.js"></script>
         <script src="js/script.js"></script>		
 		<input type="hidden" id="curlang" value="english" />
 		<script>
