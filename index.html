@@ -12,6 +12,21 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<link rel="stylesheet" media='screen and (min-width: 481px)' href="css/desktop.css"/>
 		<link rel="stylesheet" media='screen and (max-width: 480px)' href="css/mobile.css"/> 
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+
+$("canvas").attr("style","width:60%;margin-left:auto;margin-right:auto;margin-top:7% !important;background-image:       linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);height:100%;background-size:50px 50px;");
+});
+</script>
+
 		<style>
 			@media print {
 				header{display: none;}
@@ -25,30 +40,23 @@
             <img id="menu" src="images/menu.png" alt="menu" > 
         </header> 
 		<div id="container"></div>
-		<div id="language">
-			<p>Change language</p>
-			<ul>
-				<li><a onclick="changelanguage('es')">Español</a></li>
-				<li><a onclick="changelanguage('zh')">中文</a></li>
-				<li><a onclick="changelanguage('en')">English</a></li>								
-			</ul>	
-		</div>	
+		
 		<div id="info">
 		
 		</div>
-		<div id="volumeimg"></div>
+		<div id="volumeimg" style="display:none;"></div>
 		<script src="js/bodydata.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="build/three.min.js"></script>
 		
 		<script src="js/UCSCharacter.js"></script>
 
-		<script src="js/Detector.js"></script>
+		<script src="js/Detector.js"></script> <!--this is not required -->
 
 		
-		<script src='js/libs/dat.gui.min.js'></script>
+ 		 <script src='js/libs/dat.gui.min.js'></script> <!--this is to load body parts items on the left side -->
 				
-		<script src="js/controls/OrbitControls.js"></script>
+		<script src="js/controls/OrbitControls.js"></script> <!-- to load the body canvas -->
 		
 		<script>
 			
